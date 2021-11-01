@@ -5,6 +5,10 @@ const Funcionarios = () => {
     return(
         <>
             <Header />
+            <main>
+                
+            </main>
+
    
         </>
     )
