@@ -1,9 +1,11 @@
 import React from "react";
-
+import Funcionarios from "./pages/Funcionarios/Funcionarios";
 
 function App() {
   return (
-    <div ></div>
+    <div >
+      <Funcionarios />
+    </div>
   );
 }
 
