@@ -1,13 +1,17 @@
 import React from "react";
-import Header from "../../components/Header/Header";
+import Table from "../../components/Table/Table";
+import useRequestData from "../../hooks/useRequestData"
+import { urlBase } from "../../parameters/urlBase";
 
 const Funcionarios = () => {
+    const { data, getAll } = useRequestData(`${urlBase}`);
+    console.log("data", data)
+
     return(
         <>
-            <Header />
-            <main>
+        <Table data={data}/>
 
-            </main>
+          
         </>
     )
 }
