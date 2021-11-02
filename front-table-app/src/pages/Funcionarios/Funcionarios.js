@@ -10,8 +10,6 @@ const Funcionarios = () => {
     return(
         <>
         <Table data={data}/>
-
-          
         </>
     )
 }
