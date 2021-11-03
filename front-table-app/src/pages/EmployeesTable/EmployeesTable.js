@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import useRequestData from "../../hooks/useRequestData"
 import { urlBase } from "../../parameters/urlBase";
+import { ImgEmployees } from "./styled";
 
 const EmployeesTable = () => {
     const [searchInput, setSearchInput] = useState('')
@@ -37,7 +38,7 @@ const EmployeesTable = () => {
                 }).map((dado) => {
                     return (
                         <tr key={dado.id}>
-                            <td><img src={dado.image} alt="foto funcionário" width="50px" /></td>
+                            <td><ImgEmployees src={dado.image} alt="foto funcionário" width="50px" /></td>
                             <td>{dado.name}</td>
                             <td>{dado.job}</td>
                             <td>{dado.admission_date}</td>
