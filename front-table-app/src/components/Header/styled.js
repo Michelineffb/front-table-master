@@ -6,3 +6,9 @@ export const HeaderTag = styled.div`
     height: 60px;
 `
 
+export const ImgHeader = styled.img`
+    position: absolute;
+    left: 32px;
+    top: 12px;
+`
+
