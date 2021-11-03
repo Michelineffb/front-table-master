@@ -5,11 +5,11 @@ import { urlBase } from "../../parameters/urlBase";
 
 const Funcionarios = () => {
     const { data, getAll } = useRequestData(`${urlBase}`);
-    console.log("data", data)
+    
 
     return(
         <>
-        <Table data={data}/>
+        <Table data={data} />
         </>
     )
 }

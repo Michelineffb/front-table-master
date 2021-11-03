@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import Search from "../Search/Search";
 
 const Table = ({ data }) => {
+    const [ search, setSearch ] = useState('')
+console.log('sear',search)
+    
+    const handleChange = (event) => {
+        setSearch(event.target.value)
+    }
 
     const HeadTable = () => { //dados do título das colunas
         return (
@@ -19,9 +26,15 @@ const Table = ({ data }) => {
     const RowTable = () => { //dados das linhas
         return (
             <tbody>
-                {data && data.map((dado) => {
+                {data && data.filter((dado) => {
+                    if(!search){
+                        return dado
+                    } else if(dado.name.toLowerCase().includes(search.toLowerCase()) || dado.job.toLowerCase().includes(search.toLowerCase()) || dado.admission_date.toLowerCase().includes(search.toLowerCase())){
+                        return dado
+                    }
+                }).map((dado) => {
                     return (
-                        <tr>
+                        <tr key={dado.id}>
                             <td><img src={dado.image} alt="foto funcionário" width="50px" /></td>
                             <td>{dado.name}</td>
                             <td>{dado.job}</td>
@@ -35,10 +48,13 @@ const Table = ({ data }) => {
     }
 
     return (
+        <>
+        <Search handleChange={ handleChange }/>
         <table>
             <HeadTable />
             <RowTable />
         </table>
+        </>
     )
 }
 
