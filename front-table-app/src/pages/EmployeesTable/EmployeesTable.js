@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from "react";
-import Search from "../Search/Search";
+import React, { useState } from "react";
+import useRequestData from "../../hooks/useRequestData"
+import { urlBase } from "../../parameters/urlBase";
 
-const Table = ({ data }) => {
-    const [ search, setSearch ] = useState('')
-console.log('sear',search)
+const EmployeesTable = () => {
+    const [searchInput, setSearchInput] = useState('')
+    const { data, getAll } = useRequestData(`${urlBase}`);
     
+
     const handleChange = (event) => {
-        setSearch(event.target.value)
+        setSearchInput(event.target.value)
     }
 
     const HeadTable = () => { //dados do título das colunas
@@ -27,9 +29,9 @@ console.log('sear',search)
         return (
             <tbody>
                 {data && data.filter((dado) => {
-                    if(!search){
+                    if (!searchInput) {
                         return dado
-                    } else if(dado.name.toLowerCase().includes(search.toLowerCase()) || dado.job.toLowerCase().includes(search.toLowerCase()) || dado.admission_date.toLowerCase().includes(search.toLowerCase())){
+                    } else if (dado.name.toLowerCase().includes(searchInput.toLowerCase()) || dado.job.toLowerCase().includes(searchInput.toLowerCase()) || dado.admission_date.toLowerCase().includes(searchInput.toLowerCase())) {
                         return dado
                     }
                 }).map((dado) => {
@@ -49,13 +51,13 @@ console.log('sear',search)
 
     return (
         <>
-        <Search handleChange={ handleChange }/>
-        <table>
-            <HeadTable />
-            <RowTable />
-        </table>
+            <input type="text" placeholder="Pesquisar" onChange={handleChange} />
+            <table>
+                <HeadTable />
+                <RowTable />
+            </table>
         </>
     )
 }
 
-export default Table;
+export default EmployeesTable;

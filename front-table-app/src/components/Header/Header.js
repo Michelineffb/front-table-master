@@ -4,10 +4,10 @@ import { HeaderTag } from "./styled";
 
 
 const Header = () => {
-    return(
+    return (
         <HeaderTag>
-            <img src={Logo} alt="Logo Be Mobile"/>
+            <img src={Logo} alt="Logo Be Mobile" />
         </HeaderTag>
     )
 }
-export  default Header;
+export default Header;
