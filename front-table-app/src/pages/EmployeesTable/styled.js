@@ -11,13 +11,14 @@ export const ContainerInputName = styled.div`
     font-size: 24px;
 `
 
-export const Input = styled.input`
+export const InputSearch = styled.input`
     width: 278px;
     height: 40px;
     border-radius: 4px;
 `
 
-export const HeadT = styled.thead`
+export const HeadTable = styled.thead`
+    width: 960px;
     height: 49px;
     background: #5984C0;
     border-radius: 4px 4px 0px 0px;

@@ -16,9 +16,6 @@ export default function useRequestData( url, initialState ) {
         requisicaoGet(url);
     }, []);
 
- console.log('data',data)
-   
-
     return {data, requisicaoGet}
 
 
