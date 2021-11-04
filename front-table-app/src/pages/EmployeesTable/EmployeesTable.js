@@ -60,7 +60,11 @@ const EmployeesTable = () => {
         <>
             <ContainerInputName>
                 <p>Funcionários</p>
-                <InputSearch type="text" placeholder="Pesquisar" onChange={handleChange} />
+                <div>
+                    <InputSearch type="text" placeholder="Pesquisar" onChange={handleChange} />
+                    <i class="fas fa-search"></i>
+                </div>
+                
             </ContainerInputName>
 
             <table>
