@@ -16,12 +16,13 @@ Resolução de tela:
 - React;
 - Axios;
 - Styled Components;
+- Hook para requisição;
 - API JSON Server.
 
 
 # O que contém:
 - Página com dados dos funcionários;
-- Input para pesquisa.
+- Input para pesquisa. Que é realizada através de um filtro.
 
 
 # O que funciona:
