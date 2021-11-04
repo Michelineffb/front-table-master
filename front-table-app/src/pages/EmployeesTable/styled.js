@@ -17,6 +17,18 @@ export const InputSearch = styled.input`
     border-radius: 4px;
 `
 
+export const ContainerInputIcon = styled.div`
+  position: relative;
+  i{
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    color:#7D7D7D;
+    width:17,49px;
+    height:17,49px;
+  }  
+`
+
 export const HeadTable = styled.thead`
     width: 960px;
     height: 49px;

@@ -2,7 +2,7 @@ import moment from "moment";
 import React, { useState } from "react";
 import useRequestData from "../../hooks/useRequestData"
 import { urlBase } from "../../parameters/urlBase";
-import { ImgEmployees, HeadTable, Row, Tr, InputSearch, ContainerInputName } from "./styled";
+import { ImgEmployees, HeadTable, Row, Tr, InputSearch, ContainerInputIcon, ContainerInputName } from "./styled";
 import formatPhoneNumber from "../../parameters/formatPhoneNumber";
 
 
@@ -60,10 +60,10 @@ const EmployeesTable = () => {
         <>
             <ContainerInputName>
                 <p>Funcionários</p>
-                <div>
+                <ContainerInputIcon>
                     <InputSearch type="text" placeholder="Pesquisar" onChange={handleChange} />
                     <i class="fas fa-search"></i>
-                </div>
+                </ContainerInputIcon>
                 
             </ContainerInputName>
 
